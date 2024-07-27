@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./addpage.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h1>Admin Dashboard</h1>
+        <form id="manageNavbarForm">
+            <label for="headerSelect">Select Header Section:</label>
+            <select id="headerSelect">
+                <option value="navbar">Navbar</option>
+                <!-- More headers can be added here -->
+            </select>
+            
+            <label for="actionSelect">Select Action:</label>
+            <select id="actionSelect">
+                <option value="addCategory">Add Category</option>
+                <option value="removeCategory">Remove Category</option>
+                <option value="addSubcategory">Add Subcategory</option>
+                <option value="removeSubcategory">Remove Subcategory</option>
+            </select>
+            
+            <div id="dynamicFields">
+                <!-- Dynamic fields will be added here based on the selected action -->
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="addpage.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

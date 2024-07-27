@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/670d8593df.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./addproduct.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Product Add</h1>
+                    
+
+        <div class="form-group product-type">
+            <label for="productType">Select Product Type:</label>
+            <select id="productType">
+                <option value="new">New Product</option>
+                <option value="existing">Existing Product</option>
+            </select>
+            <!-- <button type="button" id="confirmProductType">OK</button> -->
+        </div>
+
+        <div class="form-group" id="uidContainer" style="display: none;">
+            <label for="productUid">Product UID:</label>
+            <input type="text" id="productUid" placeholder="Enter Product UID">
+            <button type="button" id="loadProduct">Load Product</button>
+        </div>
+
+        <form id="productForm">
+
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select id="category" name="category">
+                        <option value="">Select Category</option>
+                        <!-- Add categories here -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="subcategory">Subcategory:</label>
+                    <select id="subcategory" name="subcategory">
+                        <option value="">Select Subcategory</option>
+                        <!-- Add subcategories here -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="item">Item:</label>
+                    <select id="item" name="item">
+                        <option value="">Select Item</option>
+                        <!-- Add items here -->
+                    </select>
+                </div>
+
+            <div class="form-group">
+                <label for="productName">Product Name:</label>
+                <input type="text" id="productName" name="productName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="newPrice">New Price:</label>
+                <input type="number" id="newPrice" name="newPrice" required>
+            </div>
+
+            <div class="form-group">
+                <label for="oldPrice">Old Price:</label>
+                <input type="number" id="oldPrice" name="oldPrice">
+            </div>
+
+            <div class="form-group discount-group">
+                <label for="discount">Discount:</label>
+                <select name="discount" id="discount">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+            <div class="form-group discount-group">
+                <label for="discount">Discount Amount:</label>
+                <input type="number" id="discountAmount" name="discountAmount" placeholder="Discount Amount" min="0" step="0.01" readonly>
+            </div>
+                
+            <div class="form-group">
+                <label for="discountPercentage">Discount Percentage:</label>
+                <input type="text" id="discountPercentage" name="discountPercentage" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Product Description:</label>
+                <textarea id="description" name="description" placeholder="Describe the product here" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="aboutThisItem">About This Item:</label>
+                <textarea id="aboutThisItem" name="aboutThisItem" placeholder="Additional details about this item" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="specification">Specification:</label>
+                <textarea id="specification" name="specification" placeholder="Specifications of the product"  required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="images">Product Images:</label>
+                <input type="file" id="images" name="images" accept="image/*" multiple>
+            </div>
+
+            <div class="form-group">
+                <label for="mainImage">Select Main Image:</label>
+                <select id="mainImage" name="mainImage">
+                    <option value="">Select Main Image</option>
+                    <!-- Add options dynamically based on uploaded images -->
+                </select>
+            </div>
+                
+                <button type="submit" id="saveForm">Save Product</button>
+
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script src="./addproduct.js" type="module"></script>
+</body>
+
+</html>

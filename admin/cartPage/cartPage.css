@@ -1,0 +1,26 @@
+.cartitems{
+    width: 90%;
+    margin: 50px auto;
+}
+.cartitems .cartImages{
+    width: 50%;
+}
+.cartitems .cartImages .lineImages{
+    width: 20%;
+}
+.cartitems .cartImages .lineImages img{
+    width: 100px;
+    object-fit: contain;
+}
+.cartitems .cartImages .mainImage{
+    width: 80%;
+}
+.cartitems .cartDetails{
+    width: 40%;
+}
+
+
+#counterOption{
+    /* background-color: salmon !important; */
+    border: 1px solid black;
+}

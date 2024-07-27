@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.product-type {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between elements */
+}
+
+.product-type label {
+    flex: 0 0 200px; /* Fixed width for label */
+}
+
+/* .product-type select, */
+/* .product-type button { */
+    /* flex: 1; Take up remaining space */
+/* } */
+
+.product-type button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-type button:hover {
+    background-color: #0056b3;
+}
+
+#uidContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#uidContainer label {
+    flex: 0 0 200px;
+}
+
+#uidContainer input{
+    width: 70%;
+}
+
+#uidContainer button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: visible;       
+    text-overflow: clip;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: calc(30% - 5px);
+}
+
+#uidContainer button:hover {
+    background-color: #0056b3;
+}
+
+#productForm {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"],
+button[type="button"] {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+    background-color: #218838;
+}

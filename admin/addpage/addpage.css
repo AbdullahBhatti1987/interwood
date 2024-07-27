@@ -1,0 +1,91 @@
+/* Admin Page Styling */
+.admin-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#manageNavbarForm {
+    display: grid;
+    gap: 20px;
+}
+
+#manageNavbarForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#manageNavbarForm input, 
+#manageNavbarForm select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#manageNavbarForm button {
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#manageNavbarForm button:hover {
+    background: #0056b3;
+}
+
+/* Navbar Styling */
+.navbar .nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar .nav ul li {
+    position: relative;
+}
+
+.navbar .nav ul li .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    list-style: none;
+}
+
+.navbar .nav ul li:hover .submenu {
+    display: block;
+}
+
+.navbar .nav ul li .submenu ul {
+    padding-left: 20px;
+}
+
+.navbar .nav ul li .submenu li {
+    margin-bottom: 10px;
+}
+
+.navbar .nav ul li .submenu li .submenu {
+    top: 0;
+    left: 100%;
+}
