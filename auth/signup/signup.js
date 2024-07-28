@@ -57,7 +57,7 @@ signupForm.addEventListener("submit", (e) => {
         setDoc(usersDbRef, userInfo)
           .then(() => {
             console.log("User data successfully saved to the database.");
-            window.location.href = "/";
+            window.location.href = "/interwood/index.html";
           })
           .catch((error) => {
             console.error("Error saving user data to the database:", error);
@@ -78,11 +78,11 @@ signupForm.addEventListener("submit", (e) => {
 let homePage = document.getElementById("homePage");
 
 homePage.addEventListener("click", () => {
-  window.location.href = "/";
+  window.location.href = "/interwood/index.html";
 });
 
 
 
 cancelForm.addEventListener("click", () => {
-  window.location.href = "/";
+  window.location.href = "/interwood/index.html";
 });

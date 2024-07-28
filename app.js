@@ -47,7 +47,7 @@ onAuthStateChanged(auth, (user) => {
         signOut(auth)
           .then(() => {
             console.log("Sign-out successful");
-            window.location.href = "/";
+            window.location.href = "/interwood/index.html";
           })
           .catch((error) => {
             // An error happened.
@@ -76,7 +76,7 @@ onAuthStateChanged(auth, (user) => {
           const user = userCredential.user;
           console.log("user Signed in");
 
-          window.location.href = "/";
+          window.location.href = "/interwood/index.html";
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -210,12 +210,78 @@ document.addEventListener("click", (event) => {
 });
 
 
+const signupBtn = document.getElementById('userSignup');
+
+signupBtn.addEventListener('click', ()=>{
+  console.log('button working')
+  window.location.href = './auth/signup/signup.html'
+})
 
 
 
+const productsDiv = document.getElementById('productsDiv')
+
+function skeleton(){
+  for(var i = 0; i < 20; i++){
+  const obj = `
+              <div role="status" class="w-3/12 m-auto m-6 border border-gray-200 rounded shadow animate-pulse md:p-6 md:m-6 dark:border-gray-700">
+                <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700">
+                    <svg class="w-full h-10 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
+                        <path d="M14.066 0H7v5a2 2 0 0 1-2 2H0v11a1.97 1.97 0 0 0 1.934 2h12.132A1.97 1.97 0 0 0 16 18V2a1.97 1.97 0 0 0-1.934-2ZM10.5 6a1.5 1.5 0 1 1 0 2.999A1.5 1.5 0 0 1 10.5 6Zm2.221 10.515a1 1 0 0 1-.858.485h-8a1 1 0 0 1-.9-1.43L5.6 10.039a.978.978 0 0 1 .936-.57 1 1 0 0 1 .9.632l1.181 2.981.541-1a.945.945 0 0 1 .883-.522 1 1 0 0 1 .879.529l1.832 3.438a1 1 0 0 1-.031.988Z"/>
+                        <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z"/>
+                    </svg>
+                </div>
+                <div class="h-6 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+                <div class="h-4 bg-gray-200 rounded-full dark:bg-gray-700 w-50 mb-2.5"></div>
+                <div class="h-4 bg-gray-200 rounded-full dark:bg-gray-700 w-50 mb-2.5"></div>
+                <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+                <div class="flex items-center">
+                    <div>
+                        <div class="h-8 bg-gray-200 rounded-2 dark:bg-gray-700 w-32 mb-2"></div>
+                    </div>
+                    <svg class="w-10 h-10 me-3 text-gray-200 dark:text-gray-700" aria-hidden="true" xmlns="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiTtpTqjjp8K1QiIUZU_Xpq5sKAxBdBwKBsQ&s" fill="currentColor" viewBox="0 0 20 20">
+                    </svg>
+                </div>
+                <span class="sr-only">Loading...</span>
+            </div>
+            `
+            productsDiv.innerHTML += obj;
+          }
+          }
+
+          skeleton()
 
 
-
-
-
-export {}
+          const slider = document.getElementById('slider');
+          const minValue = document.getElementById('minValue');
+          const maxValue = document.getElementById('maxValue');
+          
+          // Initialize noUiSlider
+          noUiSlider.create(slider, {
+              start: [40000, 200000 ],
+              connect: true,
+              range: {
+                  'min': 0,
+                  'max': 250000
+              },
+              step: 100,
+              format: {
+                  to: function (value) {
+                      return Math.round(value * 100) / 100;
+                  },
+                  from: function (value) {
+                      return value;
+                  }
+              }
+          });
+          
+          // Update the input values on slider update
+          slider.noUiSlider.on('update', function (values, handle) {
+              if (handle === 0) {
+                  minValue.value = values[0];
+              } else {
+                  maxValue.value = values[1];
+              }
+          });
+          
+          

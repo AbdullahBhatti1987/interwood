@@ -13,8 +13,6 @@ productsDiv.addEventListener('click', async (event) => {
             const productId = button.getAttribute('data-id');
             cartCount += 1;
             orderShow.textContent = cartCount;
-
-            // Initialize currentCart for the current product
             const currentCart = {
                 userId: user.uid,
                 productID: productId
@@ -31,14 +29,10 @@ productsDiv.addEventListener('click', async (event) => {
                     currentCart.address = data.userAddress;
                     currentCart.city = data.userCity;
                     currentCart.email = data.email;
-
-                    // Add the currentCart to allCart
                     if (!allCart[productId]) {
                         allCart[productId] = [];
                     }
                     allCart[productId].push(currentCart);
-
-                    // Update the Firestore with the new cart data
                     const cartRef = doc(db, 'carts', user.uid);
                     await setDoc(cartRef, { cart: allCart });
 
@@ -51,6 +45,6 @@ productsDiv.addEventListener('click', async (event) => {
             }
         }
     } else {
-        window.location.href = './auth/signup/signup.html';
+
     }
 });
