@@ -22,7 +22,7 @@ onAuthStateChanged(auth, (user) => {
       console.log("User Loged in");
       const uid = user.uid;
       userSignin_text.classList.remove("block");
-      userSignin_text.classList.add("hidden");
+      userSignin_text.classList.add("d-none");
       userSignin_icon.classList.remove("hidden");
       userSignin_icon.classList.add("flex");
       emailId.innerText = user.email;
@@ -224,7 +224,7 @@ const productsDiv = document.getElementById('productsDiv')
 function skeleton(){
   for(var i = 0; i < 20; i++){
   const obj = `
-              <div role="status" class="w-3/12 m-auto m-6 border border-gray-200 rounded shadow animate-pulse md:p-6 md:m-6 dark:border-gray-700">
+              <div role="status" class="my-3 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 col-lg-3 col-md-4 col-sm-6 col-6 m-auto m-2border border-gray-200 rounded shadow animate-pulse dark:border-gray-700">
                 <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700">
                     <svg class="w-full h-10 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
                         <path d="M14.066 0H7v5a2 2 0 0 1-2 2H0v11a1.97 1.97 0 0 0 1.934 2h12.132A1.97 1.97 0 0 0 16 18V2a1.97 1.97 0 0 0-1.934-2ZM10.5 6a1.5 1.5 0 1 1 0 2.999A1.5 1.5 0 0 1 10.5 6Zm2.221 10.515a1 1 0 0 1-.858.485h-8a1 1 0 0 1-.9-1.43L5.6 10.039a.978.978 0 0 1 .936-.57 1 1 0 0 1 .9.632l1.181 2.981.541-1a.945.945 0 0 1 .883-.522 1 1 0 0 1 .879.529l1.832 3.438a1 1 0 0 1-.031.988Z"/>
